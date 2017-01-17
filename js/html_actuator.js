@@ -1,3 +1,35 @@
+function convertValueToText(value) {
+
+  var text;
+
+  switch (value) {
+
+    case 2:
+      text = "Max";
+      break;
+
+    case 4:
+      text = "Dad";
+      break;
+
+    case 8:
+      text = "Mom";
+      break;
+
+    case 16:
+      text = "Leo";
+      break;  
+
+    case 32:
+      text = "Orla";
+      break;  
+
+  }
+
+
+  return text;
+}
+
 function HTMLActuator() {
   this.tileContainer    = document.querySelector(".tile-container");
   this.scoreContainer   = document.querySelector(".score-container");
@@ -62,7 +94,8 @@ HTMLActuator.prototype.addTile = function (tile) {
   this.applyClasses(wrapper, classes);
 
   inner.classList.add("tile-inner");
-  inner.textContent = tile.value;
+//  inner.textContent = tile.value;
+  inner.textContent = convertValueToText(tile.value);
 
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first
