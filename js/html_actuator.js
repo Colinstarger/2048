@@ -24,6 +24,11 @@ function convertValueToText(value) {
       text = "Orla";
       break;  
 
+    case 64:
+      text = "Bob!";
+      break;  
+
+
   }
 
 
